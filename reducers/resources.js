@@ -12,8 +12,8 @@ export default function products(state = {isFetching: false, data: Array.apply(n
       const data = action.payload.result;
 
       return { data, pager, isFetching: false };
-		}
+    }
     default:
       return state;
-	}
+  }
 }

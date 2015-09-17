@@ -4,18 +4,18 @@ import Stores from '../components/Stores';
 import * as StoresActions from '../actions/stores';
 
 function mapStateToProps(state) {
-	return {
-		stores: state.stores.data,
-		pager: state.stores.pager,
-		isFetching: state.stores.isFetching
-	};
+  return {
+    stores: state.stores.data,
+    pager: state.stores.pager,
+    isFetching: state.stores.isFetching
+  };
 }
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators(StoresActions, dispatch);
+  return bindActionCreators(StoresActions, dispatch);
 }
 
 export default connect(
-	mapStateToProps,
-	mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(Stores);
