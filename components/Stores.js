@@ -24,23 +24,23 @@ class Stores extends Component {
     return(
       <div>
         <Search fetchResources={this.fetchStores} location={this.props.location} />
-          <div className="row">
-            <div className="col s4 offset-s4">{ paginator }</div>
-          </div>
-
-          <div className="row">
-            <StoreCards stores={stores} isFetching={isFetching} />
-          </div>
-
-          <div className="row">
-            <div className="col s4 offset-s4">{ paginator }</div>
-          </div>
-
-          <footer className="page-footer">
-          </footer>
+        <div className="row">
+          <div className="col s4 offset-s4">{ paginator }</div>
         </div>
-      );
-    }
+
+        <div className="row">
+          <StoreCards stores={stores} isFetching={isFetching} />
+        </div>
+
+        <div className="row">
+          <div className="col s4 offset-s4">{ paginator }</div>
+        </div>
+
+        <footer className="page-footer">
+        </footer>
+      </div>
+    );
+  }
 }
 
 Stores.defaultProps = {

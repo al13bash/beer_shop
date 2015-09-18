@@ -1,7 +1,7 @@
 {
-  "name": "redux-counter-example",
+  "name": "redux-beer-shop",
   "version": "0.0.0",
-  "description": "Redux counter example",
+  "description": "redux beer shop",
   "scripts": {
     "start": "node server.js",
     "test": "mocha --recursive --compilers js:babel-core/register",

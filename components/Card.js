@@ -48,7 +48,8 @@ class Card extends Component {
   }
 }
 
-Card.defaultProps ={
+Card.defaultProps = {
   isFetching: true
-}
+};
+
 export default Card;

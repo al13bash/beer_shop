@@ -6,7 +6,7 @@ class StoreCards extends Component {
     const { stores, isFetching } = this.props;
 
     const storeCards = stores.map((store, index) => {
-        return <SmallCard key={index} resource={store} isFetching={isFetching} />;
+      return <SmallCard key={index} resource={store} isFetching={isFetching} />;
     });
 
     return(
