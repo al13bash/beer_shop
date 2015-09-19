@@ -1,7 +1,9 @@
 import React, { Component, PropTypes } from 'react';
+
 import ProductCards from './ProductCards';
 import Search from './Search';
 import Paginator from './Paginator';
+import RecordsContent from './RecordsContent';
 
 class Products extends Component {
   constructor(props) {
@@ -19,22 +21,17 @@ class Products extends Component {
   render() {
     const { isFetching, products, pager } = this.props;
     const paginator = <Paginator fetchResources={this.fetchProducts} pager={pager} location={this.props.location} />;
+    const productCards = <ProductCards products={products} isFetching={isFetching} />
 
     return(
       <div>
         <Search fetchResources={this.fetchProducts} location={this.props.location} />
-
-        <div className="row">
-          <div className="col s4 offset-s4"> { paginator } </div>
-        </div>
-
-        <div className="row">
-          <ProductCards products={products} isFetching={isFetching} />
-        </div>
-
-        <div className="row">
-          <div className="col s4 offset-s4"> { paginator } </div>
-        </div>
+        <RecordsContent
+          paginator={paginator}
+          cards={productCards}
+          recordsName={"beers"}
+          recordsCount={products.length}
+        />
       </div>
     );
   }

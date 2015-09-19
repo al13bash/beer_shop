@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import Search from './Search';
 import StoreCards from './StoreCards';
 import Paginator from './Paginator';
+import RecordsContent from './RecordsContent';
 
 class Stores extends Component {
   constructor(props) {
@@ -20,21 +21,17 @@ class Stores extends Component {
   render() {
     const { isFetching, stores, pager } = this.props;
     const paginator = <Paginator fetchResources={this.fetchStores} pager={pager} location={this.props.location} />;
+    const storeCards = <StoreCards stores={stores} isFetching={isFetching} />;
 
     return(
       <div>
         <Search fetchResources={this.fetchStores} location={this.props.location} />
-        <div className="row">
-          <div className="col s4 offset-s4">{ paginator }</div>
-        </div>
-
-        <div className="row">
-          <StoreCards stores={stores} isFetching={isFetching} />
-        </div>
-
-        <div className="row">
-          <div className="col s4 offset-s4">{ paginator }</div>
-        </div>
+        <RecordsContent
+          paginator={paginator}
+          cards={storeCards}
+          recordsName={"stores"}
+          recordsCount={stores.length}
+        />
       </div>
     );
   }
