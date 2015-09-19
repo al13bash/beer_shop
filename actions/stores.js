@@ -1,5 +1,5 @@
 import * as ActionTypes from './../constants/action_types';
-import buildUrlWithQuery from './../utils/build_url_with_query';
+import buildUrlWithQuery from './../utils/actions/build_url_with_query';
 import * as API_URLS from './../constants/urls';
 
 export function fetchStores(query ={}) {

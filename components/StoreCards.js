@@ -17,4 +17,9 @@ class StoreCards extends Component {
   }
 }
 
+StoreCards.propTypes = {
+  isFetching: PropTypes.bool.isRequired,
+  stores: PropTypes.array.isRequired
+};
+
 export default StoreCards;

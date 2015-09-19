@@ -54,7 +54,8 @@ Search.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
     query: PropTypes.object
-  })
+  }),
+  fetchResources: PropTypes.func.isRequired
 };
 
 export default Search;

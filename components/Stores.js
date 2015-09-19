@@ -49,8 +49,9 @@ Stores.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
     query: PropTypes.object.isRequired,
-    params: PropTypes.object.isRequired
-  })
+    params: PropTypes.object
+  }),
+  fetchStores: PropTypes.func.isRequired
 };
 
 export default Stores;

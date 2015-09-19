@@ -29,4 +29,9 @@ class SmallCard extends Component {
   }
 }
 
+SmallCard.propTypes = {
+  isFetching: PropTypes.bool.isRequired,
+  resouce: PropTypes.object
+};
+
 export default SmallCard;

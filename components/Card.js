@@ -52,4 +52,10 @@ Card.defaultProps = {
   isFetching: true
 };
 
+Card.propsTypes = {
+  resource: PropTypes.object.isRequired,
+  isFetching: PropTypes.boolean,
+  handleOnClick: PropTypes.func.isRequired
+};
+
 export default Card;

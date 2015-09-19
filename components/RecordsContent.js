@@ -6,7 +6,6 @@ class RecordsContent extends Component {
   render() {
     const { paginator, cards, recordsCount, recordsName } = this.props;
 
-    console.log(recordsCount)
     const content = (recordsCount !== 0) ?
       (<div>
         <div className="row">
@@ -31,7 +30,10 @@ class RecordsContent extends Component {
   }
 }
 
-RecordsNotFound.propTypes = {
+RecordsContent.propTypes = {
+  paginator: PropTypes.object.isRequired,
+  recordsCount: PropTypes.number.isRequired,
+  recordsName: PropTypes.string.isRequired
 };
 
 export default RecordsContent;

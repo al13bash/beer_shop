@@ -48,7 +48,9 @@ Paginator.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
     query: PropTypes.object
-  }).isRequired
+  }).isRequired,
+  pager: PropTypes.object.isRequired,
+  fetchResources: PropTypes.func.isRequired
 };
 
 export default Paginator;

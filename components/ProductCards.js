@@ -29,4 +29,9 @@ ProductCards.contextTypes = {
   router: PropTypes.object.isRequired
 };
 
+ProductCards.propsTypes = {
+  products: PropTypes.array.isRequired,
+  isFetching: PropTypes.bool.isRequired
+};
+
 export default ProductCards;

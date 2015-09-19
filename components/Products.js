@@ -49,7 +49,10 @@ Products.propTypes = {
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
     query: PropTypes.object
-  })
+  }),
+  fetchProducts: PropTypes.func.isRequired,
+  isFetching: PropTypes.bool.isRequired,
+  products: PropTypes.array.isRequired
 };
 
 export default Products;
