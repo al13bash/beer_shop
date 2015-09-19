@@ -35,9 +35,6 @@ class Products extends Component {
         <div className="row">
           <div className="col s4 offset-s4"> { paginator } </div>
         </div>
-
-        <footer className="page-footer">
-        </footer>
       </div>
     );
   }
