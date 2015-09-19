@@ -1,6 +1,6 @@
 ## Installation
 
-Generate and run the migration:
+Run
 
 ```shell
 npm install
