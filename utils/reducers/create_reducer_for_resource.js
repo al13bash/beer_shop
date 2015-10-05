@@ -4,7 +4,10 @@ export default (actionTypes) =>
   (state = {isFetching: false, data: arrayOfEmptyObjects, pager: {}}, action) => {
     switch (action.type) {
       case actionTypes.begin: {
-        return {...state, isFetching: true}
+        return {...state,
+                isFetching: true,
+                data: (state.data.length !== 0) ? state.data : arrayOfEmptyObjects
+               };
       }
       case actionTypes.success: {
         const { pager } = action.payload;
