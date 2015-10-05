@@ -8,4 +8,4 @@ npm start
 ```
 [Demo](http://evorob.me/)
 
-> Run only on localhost:3000 in development
+> Run only on lvh.me:3000 in development
